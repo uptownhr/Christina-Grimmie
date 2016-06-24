@@ -22,7 +22,7 @@ block content
 						input#name.form-control(type='text', name='name', required='' value=contact.name,
 						disabled)
 					.form-group.col-sm-6
-						label.h4(for='email') Email 
+						label.h4(for='email') Email
 						input#email.form-control(type='email', name='email', required='' value=contact.email, disabled)
 					.form-group.col-sm-12
 						label.h4(for='date') Message Sent on:
@@ -32,5 +32,4 @@ block content
 						textarea#message.form-control(rows='8', name='message', disabled)=contact.message
 					a.button#form-submit.btn.btn-primary-outline.btn-md.pull-right(type='submit'
 					href='/admin/contacts') Back to Contacts List
-						
-					
+

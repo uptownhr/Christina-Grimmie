@@ -9,11 +9,46 @@ html(lang='en')
     link(href='/admin/assets/css/toolkit-light.css', rel='stylesheet')
     link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css')
     link(href='/admin/assets/css/application.css', rel='stylesheet')
+    link(rel='stylesheet', href='/css/timeline.css')
     link(rel='stylesheet', href='/site/css/style.css')
   body
+    .xinvisible
+      button.xbutton X
+      .xmen
+        .video-container
+          iframe.video-frame(src="zzz" frameborder="0" allowfullscreen)
+    .xinvisible-timeline
+      button.xbutton2 X
+      .xmen
+        iframe.websiteRip(src="http://elotalk.com/culture/gaming-community-loses-christina-grimmie/")
     .container.content
       main
         include partials/flash
+        .wrapper.row1
+          header#header.clear
+            #hgroup
+              h1
+                a(href='#') Christina Grimmie
+              h2 Remembering the Life and Accomplishments of Christina Grimmie
+            form(action='#', method='post')
+              fieldset
+                legend Search:
+                input(type='text', value='Search Our Website…', onfocus="this.value=(this.value=='Search Our Website…')? '' : this.value ;")
+                input#sf_submit(type='submit', value='submit')
+            nav
+              ul
+                li
+                  a(href='/newPage') Home
+                li
+                  a(href='/timeline') Timeline
+                li
+                  a(href='/media') Media
+                li
+                  a(href='/community') Community
+                li
+                  a(href='/about') About
+                li.last
+                  a(href='/contactUS') Contact Us
         block content
       footer.footer(style='clear: both;')
         hr
@@ -34,3 +69,30 @@ html(lang='en')
         $('.dropdown-toggle').dropdown();
       });
 
+      $( document ).ready(function() {
+        $('.icon').on('click', function (){
+          var videoURL = $(this).attr('title');
+          $('.video-frame').attr('src', videoURL)
+          $('.xinvisible').show();
+          event.preventDefault();
+        })
+
+        //close button activate home page
+        $('.xbutton').on('click', function (){
+          $('.xinvisible').hide();
+          $('.video-frame').attr('src', '')
+        })
+
+        $('.trigger-hidden').on('click', function (){
+          var site = $(this).attr('title');
+          $('.websiteRip').attr('src', site)
+          $('.xinvisible-timeline').show();
+          event.preventDefault();
+        })
+
+        //close button activate for timeline page
+        $('.xbutton2').on('click', function (){
+          $('.xinvisible-timeline').hide();
+          $('.websiteRip').attr('src', '')
+        })
+      })

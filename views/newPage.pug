@@ -1,108 +1,89 @@
-extends layout
-block content
-html
-  body
-    .wrapper.row1
-      header#header.clear
-        #hgroup
-          h1
-            a(href='#') Basic 84
-          h2 Free HTML5 Website Template
-        form(action='#', method='post')
-          fieldset
-            legend Search:
-            input(type='text', value='Search Our Website…', onfocus="this.value=(this.value=='Search Our Website…')? '' : this.value ;")
-            input#sf_submit(type='submit', value='submit')
-        nav
-          ul
-            li
-              a(href='#') Text Link
-            li
-              a(href='#') Text Link
-            li
-              a(href='#') Text Link
-            li
-              a(href='#') Text Link
-            li.last
-              a(href='#') Text Link
-    // content
-    .wrapper.row2
-      #container.clear
-        // content body
-        section#slider
-          a(href='#')
-            img(src='images/demo/960x360.gif', alt='')
-        section#shout
-          p
-            | Vestibulumaccumsan egestibulum eu justo convallis augue estas aenean elit intesque sed. Facilispede estibulum nulla orna nisl velit elit ac aliquat non tincidunt namjusto cras urna.
-        // main content
-        #homepage
-          // services area
-          h1 Services We Offer
-          section#services.clear
-            article
-              figure
-                img(src='images/demo/32x32.gif', width='32', height='32', alt='')
-              strong Lorum ipsum dolor
-              p
-                | This is a W3C compliant free website template from
-                a(href='http://www.os-templates.com/', title='Free Website Templates') OS Templates
-                | . For full terms of use of this template please read our
-                a(href='http://www.os-templates.com/template-terms') website template licence
-                | .
-              p.more
-                a(href='#') Read More »
-            article
-              figure
-                img(src='images/demo/32x32.gif', width='32', height='32', alt='')
-              strong Lorum ipsum dolor
-              p
-                | You can use and modify the template for both personal and commercial use. You must keep all copyright information and credit links in the template and associated files.
-              p.more
-                a(href='#') Read More »
-            article.last
-              figure
-                img(src='images/demo/32x32.gif', width='32', height='32', alt='')
-              strong Lorum ipsum dolor
-              p
-                | For more HTML5 templates visit
-                a(href='http://www.os-templates.com/') free website templates
-                | . Orciinterdum condimenterdum nullamcorper elit nam curabitur laoreet met praesenean et iaculum.
-              p.more
-                a(href='#') Read More »
-          // / services area
-          // ##########################################################################################
-          // ##########################################################################################
-          // ##########################################################################################
-          // ##########################################################################################
-          // One Quarter
-          h1 Latest From The Gallery
-          section#latest.last.clear
-            article.one_quarter
-              figure
-                img(src='images/demo/215x315.gif', width='215', height='315', alt='')
-                figcaption Image Caption Here
-            article.one_quarter
-              figure
-                img(src='images/demo/215x315.gif', width='215', height='315', alt='')
-                figcaption Image Caption Here
-            article.one_quarter
-              figure
-                img(src='images/demo/215x315.gif', width='215', height='315', alt='')
-                figcaption Image Caption Here
-            article.one_quarter.lastbox
-              figure
-                img(src='images/demo/215x315.gif', width='215', height='315', alt='')
-                figcaption Image Caption Here
-          // / One Quarter
-        // / content body
-    // Footer
-    .wrapper.row3
-      footer#footer.clear
-        p.fl_left
-          | Copyright © 2012 - All Rights Reserved -
-          a(href='#') Domain Name
-        p.fl_right
-          | Template by
-          a(href='http://www.os-templates.com/', title='Free Website Templates') OS Templates
+extends layout2
 
+block content
+  .wrapper.row2
+    #container.clear
+      // Slider
+      section#slider.clear
+        figure
+          img(src='../site/img/animeImage.gif', alt='')
+          figcaption
+            h2 A Loss That Will Be Remembered
+            p
+              | Christina Victoria Grimmie was an extremely talented American singer and songwriter whose bright future was cut short by a deranged, mentally sick, pathetic, 27 year old man, Kevin James Loibl.  She was taken from the world, much too soon.  She will be missed dearly.
+            footer.more
+              a(href='https://en.wikipedia.org/wiki/Death_of_Christina_Grimmie') Read More »
+      // main content
+      #intro
+        section.clear
+          // article 1
+          article.two_quarter
+            h2 Celebrating the Life of Christia Grimmie
+            p This page was created to honor and celebrate the life of Christia Grimmie as well as keep a record of her dedication and commitment to her art, to her fans, and for all who loved her and wishes more than anything to have prevented the tragic end that came to be.
+          // article 2
+          article.two_quarter.lastbox
+            figure
+              ul.clear
+                li
+                  a.icon(title='https://www.youtube.com/embed/bRGOAeC_Vhg' href='')
+                    img(src='../site/img/icon1.jpg', width='130', height='130', alt='')
+                li
+                  a.icon(title='https://www.youtube.com/embed/QfifaWeiem4' href='')
+                    img(src='../site/img/icon2.png', width='130', height='130', alt='')
+                li.last
+                  a.icon(title='https://www.youtube.com/embed/3290550YVog' href='')
+                    img(src='../site/img/icon3.jpg', width='130', height='130', alt='')
+              figcaption
+                a(href='#') View Other Video/Music Performed by Christia Grimmie
+      // ##########################################################################################
+      // ##########################################################################################
+      // ##########################################################################################
+      // ##########################################################################################
+      #homepage.last.clear
+        section.one_quarter
+          h2.title From The Blog
+          article
+            header
+              h2 Post Title
+              address
+                a(href='#') Admin
+                | , domainname.com
+              time(datetime='2000-04-06')
+                | Friday, 6
+                sup th
+                |  April 2000
+            p
+              | Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet.
+            footer.more
+              a(href='#') Read More »
+        section.one_quarter
+          h2.title Quick Links
+          nav
+            ul
+              li
+                a(href='#') Lorem ipsum dolor sit
+              li
+                a(href='#') Amet consectetur
+              li
+                a(href='#') Praesent vel sem id
+              li
+                a(href='#') Curabitur hendrerit est
+              li.last
+                a(href='#') Sed a nulla urna
+        section.two_quarter.lastbox
+          h2.title About US
+          img.imgl(src='images/demo/130x130.gif', width='130', height='130', alt='')
+          p
+            | Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet. Vestibulum sapien. Proin quam. Etiam ultrices. Suspendisse in justo eu magna luctus suscipit.
+          footer.more
+            a(href='#') Read More »
+      // / content body
+  // Footer
+  .wrapper.row3
+    footer#footer.clear
+      p.fl_left
+        | Copyright © 2012 - All Rights Reserved -
+        a(href='#') Domain Name
+      p.fl_right
+        | Template by
+        a(href='http://www.os-templates.com/', title='Free Website Templates') OS Templates

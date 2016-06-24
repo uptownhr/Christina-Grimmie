@@ -66,4 +66,18 @@ router.post('/contact', async ctx => {
   ctx.redirect('/contact');
 }) //end of post request
 
+router.get('/newPage', async ctx => {
+  ctx.render('newPage')
+})
+
+router.get('/timeline', async ctx => {
+  ctx.render('timeline')
+})
+
+
+
+
+
+
+
 module.exports = router
