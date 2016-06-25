@@ -23,27 +23,26 @@ html(lang='en')
       .xmen
         iframe.websiteRip(src="")
     .container.content
+      .wrapper.row1
+        header#header.clear(style="position:relative")
+          #hgroup
+            h1
+              a(href='/christina-grimmie') Christina Grimmie
+            h2 Remembering the Life and Accomplishments of Christina Grimmie
+          nav
+            ul
+              audio#music(controls).pull-right
+                source(src="/holdon.mp3" type="audio/mpeg")
+              li
+                a(href='/christina-grimmie') Home
+              li.last
+                a(href='/christina-grimmie/timeline') Timeline
+              .share(style="position: absolute; top:25px; right: 0")
+                span.pull-right.st_sharethis_large(displayText='ShareThis')
+                span.pull-right.st_facebook_large(displayText='Facebook')
+                span.pull-right.st_twitter_large(displayText='Twitter')
+                span.pull-right.email_large(displayText='Email')    
       main
-        .wrapper.row1
-          header#header.clear(style="position:relative")
-            #hgroup
-              h1
-                a(href='/christina-grimmie') Christina Grimmie
-              h2 Remembering the Life and Accomplishments of Christina Grimmie
-            nav
-              ul
-                audio#music(autoplay controls).pull-right
-                  source(src="/holdon.mp3" type="audio/mpeg")
-                li
-                  a(href='/christina-grimmie') Home
-                li.last
-                  a(href='/christina-grimmie/timeline') Timeline
-
-            .share(style="position: absolute; top:25px; right: 0")
-              span.pull-right.st_sharethis_large(displayText='ShareThis')
-              span.pull-right.st_facebook_large(displayText='Facebook')
-              span.pull-right.st_twitter_large(displayText='Twitter')
-              span.pull-right.email_large(displayText='Email')
         block content
       footer.footer(style='clear: both;')
         hr
@@ -62,10 +61,17 @@ html(lang='en')
     script(src='http://static.jsbin.com/js/embed.min.js?3.34.0')
     script.
       (function () {
-        $('.dropdown-toggle').dropdown();
         var vid = document.getElementById("music");
-        console.log(vid)
         vid.volume = .3;
+        vid.play()
+
+        $('header a').on('click', function(e){
+          e.preventDefault()
+          var location = $(this).attr('href')
+          $('main').load(location + ' .page')
+          window.history.pushState(null,null,location)
+        })
+	
       })();
 
       $( document ).ready(function() {
