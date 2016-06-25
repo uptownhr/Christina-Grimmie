@@ -8,9 +8,9 @@
     "dev": "nodemon index.js",
     "postversion": "npm run publish",
     "docker-build": "docker build -t uptownhr/lovio .",
-    "docker-push": "docker push uptownrh/lovio",
+    "docker-push": "docker push uptownhr/lovio",
     "docker-up-prod": "docker-compose -f docker-compose.prod.yml",
-    "publish": "npm run docker-build && npm run docker-push && npm run docker-up-prod"
+    "publish": "git push && npm run docker-build && npm run docker-push && npm run docker-up-prod"
   },
   "author": "",
   "license": "ISC",
