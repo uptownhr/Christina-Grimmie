@@ -1,11 +1,16 @@
 {
-  "name": "christina-grimmie",
+  "name": "lovio",
   "version": "2.1.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "prod": "node index.js",
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "postversion": "npm run publish",
+    "docker-build": "docker build -t uptownhr/lovio .",
+    "docker-push": "docker push uptownrh/lovio",
+    "docker-up-prod": "docker-compose -f docker-compose.prod.yml",
+    "publish": "docker-build && docker-push && docker-up-prod"
   },
   "author": "",
   "license": "ISC",
