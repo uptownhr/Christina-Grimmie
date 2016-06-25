@@ -10,7 +10,7 @@
     "docker-build": "docker build -t uptownhr/lovio .",
     "docker-push": "docker push uptownrh/lovio",
     "docker-up-prod": "docker-compose -f docker-compose.prod.yml",
-    "publish": "docker-build && docker-push && docker-up-prod"
+    "publish": "npm run docker-build && npm run docker-push && npm run docker-up-prod"
   },
   "author": "",
   "license": "ISC",
