@@ -9,7 +9,7 @@
     "postversion": "npm run publish",
     "docker-build": "docker build -t uptownhr/lovio .",
     "docker-push": "docker push uptownhr/lovio",
-    "docker-up-prod": "docker-compose -f docker-compose.prod.yml",
+    "docker-up-prod": "docker-compose -f docker-compose.prod.yml up -d",
     "publish": "git push && npm run docker-build && npm run docker-push && npm run docker-up-prod"
   },
   "author": "",
