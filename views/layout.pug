@@ -31,8 +31,11 @@ html(lang='en')
               h1
                 a(href='/christina-grimmie') Christina Grimmie
               h2 Remembering the Life and Accomplishments of Christina Grimmie
-
             nav
+              span.pull-right.st_sharethis_large(displayText='ShareThis')
+              span.pull-right.st_facebook_large(displayText='Facebook')
+              span.pull-right.st_twitter_large(displayText='Twitter')
+              span.pull-right.email_large(displayText='Email')
               ul
                 li
                   a(href='/christina-grimmie') Home
@@ -99,3 +102,14 @@ html(lang='en')
       })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
       ga('create', 'UA-57402468-2', 'auto');
       ga('send', 'pageview');
+
+    script(type='text/javascript').
+      var switchTo5x = true;
+    script(type='text/javascript', src='http://w.sharethis.com/button/buttons.js')
+    script(type='text/javascript').
+      stLight.options({
+        publisher: "f7c27c48-ac9c-4cde-8066-21f98e655b6d",
+        doNotHash: false,
+        doNotCopy: false,
+        hashAddressBar: false
+      });
