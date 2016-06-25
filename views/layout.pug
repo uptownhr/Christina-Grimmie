@@ -3,38 +3,41 @@ html(lang='en')
   head
     meta(charset='UTF-8')
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
-    title
+    meta(name="description" content="Remembering the Life and Accomplishments of Christina Grimmie")
+    title Christina Grimmie Tribute Timeline
     link(href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic', rel='stylesheet')
     link(href='http://v4-alpha.getbootstrap.com/dist/css/bootstrap.min.css', rel='stylesheet')
     link(href='/admin/assets/css/toolkit-light.css', rel='stylesheet')
     link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css')
     link(href='/admin/assets/css/application.css', rel='stylesheet')
+    link(rel='stylesheet', href='/css/timeline.css')
     link(rel='stylesheet', href='/site/css/style.css')
   body
-    nav
-      a(href='https://github.com/uptownhr/hackathon-starter-lite', target='_blank') Github
-      a(href='/blog') Blog
-      a(href='/contact') Contact Us
-      .btn-group
-        if user
-          button.btn.btn-info.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
-            =user.profile.name || user.email
-            | &nbsp;
-          ul.dropdown-menu
-            if user.role == 'admin' 
-              li
-                a(href='/admin') Admin
-            li
-              a(href='/user/account') My Account
-            li
-              a(href='/auth/logout') Logout
-        else
-          a(href='/auth/login') Login
-    br(style='clear: both;')
-    hr
+    .xinvisible
+      button.xbutton X
+      .xmen
+        .video-container
+          iframe.video-frame(src="zzz" frameborder="0" allowfullscreen)
+    .xinvisible-timeline
+      button.xbutton2 X
+      .xmen
+        iframe.websiteRip(src="")
     .container.content
       main
         include partials/flash
+        .wrapper.row1
+          header#header.clear
+            #hgroup
+              h1
+                a(href='#') Christina Grimmie
+              h2 Remembering the Life and Accomplishments of Christina Grimmie
+
+            nav
+              ul
+                li
+                  a(href='/') Home
+                li.last
+                  a(href='/timeline') Timeline
         block content
       footer.footer(style='clear: both;')
         hr
@@ -54,4 +57,31 @@ html(lang='en')
       (function () {
         $('.dropdown-toggle').dropdown();
       });
-                     
+
+      $( document ).ready(function() {
+        $('.icon').on('click', function (){
+          var videoURL = $(this).attr('title');
+          $('.video-frame').attr('src', videoURL)
+          $('.xinvisible').show();
+          event.preventDefault();
+        })
+
+        //close button activate home page
+        $('.xbutton').on('click', function (){
+          $('.xinvisible').hide();
+          $('.video-frame').attr('src', '')
+        })
+
+        $('.trigger-hidden').on('click', function (){
+          var site = $(this).attr('title');
+          $('.websiteRip').attr('src', site)
+          $('.xinvisible-timeline').show();
+          event.preventDefault();
+        })
+
+        //close button activate for timeline page
+        $('.xbutton2').on('click', function (){
+          $('.xinvisible-timeline').hide();
+          $('.websiteRip').attr('src', '')
+        })
+      })

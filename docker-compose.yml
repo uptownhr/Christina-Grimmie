@@ -1,32 +1,9 @@
 app:
-  image: uptownhr/hackable
+  build: ./
   volumes:
   - ./:/app
   - node_modules:/app/node_modules
   working_dir: /app
   command: npm run dev-docker
-  links:
-  - redis
-  - mongo
-  environment:
-  - MONGODB=mongodb://mongo:27017/hackathon
-  - REDIS=redis://redis:6379
   ports:
   - 3000:3000
-test:
-  image: uptownhr/hackable
-  volumes_from:
-  - app
-  working_dir: /app
-  command: npm run test-watch
-  links:
-  - app
-  - redis
-  - mongo
-  environment:
-  - MONGODB=mongodb://mongo:27017/hackathon_test
-  - REDIS=redis://redis:6379
-mongo:
-  image: mongo
-redis:
-  image: redis
