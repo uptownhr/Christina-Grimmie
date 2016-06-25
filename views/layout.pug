@@ -32,10 +32,13 @@ html(lang='en')
               h2 Remembering the Life and Accomplishments of Christina Grimmie
             nav
               ul
+                audio#music(autoplay controls).pull-right
+                  source(src="/holdon.mp3" type="audio/mpeg")
                 li
                   a(href='/christina-grimmie') Home
                 li.last
                   a(href='/christina-grimmie/timeline') Timeline
+
             .share(style="position: absolute; top:25px; right: 0")
               span.pull-right.st_sharethis_large(displayText='ShareThis')
               span.pull-right.st_facebook_large(displayText='Facebook')
@@ -48,6 +51,7 @@ html(lang='en')
           | © lov.io
           time 2016
           | . All rights reserved.
+	  
     script(src='/admin/assets/js/jquery.min.js')
     script(src='/admin/assets/js/chart.js')
     script(src='/admin/assets/js/tablesorter.min.js')
@@ -59,7 +63,10 @@ html(lang='en')
     script.
       (function () {
         $('.dropdown-toggle').dropdown();
-      });
+        var vid = document.getElementById("music");
+        console.log(vid)
+        vid.volume = .3;
+      })();
 
       $( document ).ready(function() {
         $('.icon').on('click', function (){
