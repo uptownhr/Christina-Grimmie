@@ -24,23 +24,23 @@ html(lang='en')
         iframe.websiteRip(src="")
     .container.content
       main
-        include partials/flash
         .wrapper.row1
-          header#header.clear
+          header#header.clear(style="position:relative")
             #hgroup
               h1
                 a(href='/christina-grimmie') Christina Grimmie
               h2 Remembering the Life and Accomplishments of Christina Grimmie
             nav
-              span.pull-right.st_sharethis_large(displayText='ShareThis')
-              span.pull-right.st_facebook_large(displayText='Facebook')
-              span.pull-right.st_twitter_large(displayText='Twitter')
-              span.pull-right.email_large(displayText='Email')
               ul
                 li
                   a(href='/christina-grimmie') Home
                 li.last
                   a(href='/christina-grimmie/timeline') Timeline
+            .share(style="position: absolute; top:25px; right: 0")
+              span.pull-right.st_sharethis_large(displayText='ShareThis')
+              span.pull-right.st_facebook_large(displayText='Facebook')
+              span.pull-right.st_twitter_large(displayText='Twitter')
+              span.pull-right.email_large(displayText='Email')
         block content
       footer.footer(style='clear: both;')
         hr
