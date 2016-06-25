@@ -1,7 +1,7 @@
 app:
-  image: uptownhr/christina-grimmie
+  image: uptownhr/lov.io
   environment:
-  - VIRTUAL_HOST=christinagrimmieforever.com
+  - VIRTUAL_HOST=lov.io
 proxy:
   image: jwilder/nginx-proxy
   ports:
