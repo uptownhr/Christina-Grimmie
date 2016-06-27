@@ -1,0 +1,12 @@
+app:
+  image: uptownhr/lovio
+  environment:
+  - VIRTUAL_HOST=lov.io,www.lov.io
+  restart: always
+proxy:
+  image: jwilder/nginx-proxy
+  ports:
+  - "80:80"
+  volumes:
+  - /var/run/docker.sock:/tmp/docker.sock:ro
+  restart: always

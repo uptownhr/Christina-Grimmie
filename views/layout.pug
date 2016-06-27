@@ -3,45 +3,54 @@ html(lang='en')
   head
     meta(charset='UTF-8')
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
-    title
+    meta(name="description" content="Remembering the Life and Accomplishments of Christina Grimmie")
+    title Christina Grimmie Tribute Timeline
     link(href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic', rel='stylesheet')
     link(href='http://v4-alpha.getbootstrap.com/dist/css/bootstrap.min.css', rel='stylesheet')
     link(href='/admin/assets/css/toolkit-light.css', rel='stylesheet')
     link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css')
     link(href='/admin/assets/css/application.css', rel='stylesheet')
+    link(rel='stylesheet', href='/css/timeline.css')
     link(rel='stylesheet', href='/site/css/style.css')
   body
-    nav
-      a(href='https://github.com/uptownhr/hackathon-starter-lite', target='_blank') Github
-      a(href='/blog') Blog
-      a(href='/contact') Contact Us
-      .btn-group
-        if user
-          button.btn.btn-info.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
-            =user.profile.name || user.email
-            | &nbsp;
-          ul.dropdown-menu
-            if user.role == 'admin' 
-              li
-                a(href='/admin') Admin
-            li
-              a(href='/user/account') My Account
-            li
-              a(href='/auth/logout') Logout
-        else
-          a(href='/auth/login') Login
-    br(style='clear: both;')
-    hr
+    .xinvisible
+      button.xbutton X
+      .xmen
+        .video-container
+          iframe.video-frame(src="" frameborder="0" allowfullscreen)
+    .xinvisible-timeline
+      button.xbutton2 X
+      .xmen
+        iframe.websiteRip(src="")
     .container.content
+      .wrapper.row1
+        header#header.clear(style="position:relative")
+          #hgroup
+            h1
+              a(href='/christina-grimmie') Christina Grimmie
+            h2 Remembering the Life and Accomplishments of Christina Grimmie
+          nav
+            ul
+              audio#music(controls).pull-right
+                source(src="/holdon.mp3" type="audio/mpeg")
+              li
+                a(href='/christina-grimmie') Home
+              li.last
+                a(href='/christina-grimmie/timeline') Timeline
+              .share(style="position: absolute; top:25px; right: 0")
+                span.pull-right.st_sharethis_large(displayText='ShareThis')
+                span.pull-right.st_facebook_large(displayText='Facebook')
+                span.pull-right.st_twitter_large(displayText='Twitter')
+                span.pull-right.email_large(displayText='Email')    
       main
-        include partials/flash
         block content
       footer.footer(style='clear: both;')
         hr
         small
-          | © hackable
+          | © lov.io
           time 2016
           | . All rights reserved.
+	  
     script(src='/admin/assets/js/jquery.min.js')
     script(src='/admin/assets/js/chart.js')
     script(src='/admin/assets/js/tablesorter.min.js')
@@ -51,7 +60,72 @@ html(lang='en')
     script(async='', src='//platform.twitter.com/widgets.js', charset='utf-8')
     script(src='http://static.jsbin.com/js/embed.min.js?3.34.0')
     script.
-      (function () {
-        $('.dropdown-toggle').dropdown();
+      function loadPage(location){
+        $('main').load(location + ' .page')
+        window.history.pushState(null, null, location)
+      }
+      $( document ).ready(function() {
+        var vid = document.getElementById("music");
+        vid.volume = .3;
+        vid.play()
+
+        window.onpopstate = function(event){
+          loadPage(document.location.pathname)
+        }
+
+        $('header a').on('click', function(e){
+          e.preventDefault()
+          var location = $(this).attr('href')
+          loadPage(location)
+        })
+
+        $('body').on('click', '.xbutton', function () {
+          $('.xinvisible').hide();
+          $('.video-frame').attr('src', '')
+        })
+
+        //close button activate for timeline page
+        $('body').on('click', '.xbutton2', function () {
+          $('.xinvisible-timeline').hide();
+          $('.websiteRip').attr('src', '')
+        })
+
+        $('body').on('click', '.trigger-hidden', function () {
+          var site = $(this).attr('href');
+          $('.websiteRip').attr('src', site)
+          $('.xinvisible-timeline').show();
+          event.preventDefault();
+        })
+        $('body').on('click', '.icon', function (event) {
+          var videoURL = $(this).attr('href');
+          console.log(videoURL)
+          $('.video-frame').attr('src', videoURL)
+          $('.xinvisible').show();
+          event.preventDefault();
+        })
+      })
+    script.
+      (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+                  (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+      ga('create', 'UA-57402468-2', 'auto');
+      ga('send', 'pageview');
+
+    script(type='text/javascript').
+      var switchTo5x = true;
+    script(type='text/javascript', src='http://w.sharethis.com/button/buttons.js')
+    script(type='text/javascript').
+      stLight.options({
+        publisher: "f7c27c48-ac9c-4cde-8066-21f98e655b6d",
+        doNotHash: false,
+        doNotCopy: false,
+        hashAddressBar: false
       });
-                     

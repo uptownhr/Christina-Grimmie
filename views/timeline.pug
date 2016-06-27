@@ -1,6 +1,6 @@
-extends layout2
+extends layout
 block content
-  section#cd-timeline.cd-container
+  section#cd-timeline.cd-container.page
         .cd-timeline-block
           .cd-timeline-img.cd-picture
           // cd-timeline-img
@@ -257,10 +257,8 @@ block content
             span.cd-date
           // cd-timeline-content
         // cd-timeline-block
-        .cd-timeline-block
-          .cd-timeline-img.cd-movie
-          // cd-timeline-img
-          .cd-timeline-content
-            h2 Final Section
-            p This is the content of the last section
-            span.cd-date
+  .share(style="")
+    span.pull-right.st_sharethis_large(displayText='ShareThis')
+    span.pull-right.st_facebook_large(displayText='Facebook')
+    span.pull-right.st_twitter_large(displayText='Twitter')
+    span.pull-right.email_large(displayText='Email')
