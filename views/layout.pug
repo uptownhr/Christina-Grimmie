@@ -60,16 +60,23 @@ html(lang='en')
     script(async='', src='//platform.twitter.com/widgets.js', charset='utf-8')
     script(src='http://static.jsbin.com/js/embed.min.js?3.34.0')
     script.
+      loadPage(location){
+        $('main').load(location + ' .page')
+        window.history.pushState(null, null, location)
+      }
       $( document ).ready(function() {
         var vid = document.getElementById("music");
         vid.volume = .3;
         vid.play()
 
+        window.onpopstate = function(event){
+          loadPage(document.location.pathname)
+        }
+
         $('header a').on('click', function(e){
           e.preventDefault()
           var location = $(this).attr('href')
-          $('main').load(location + ' .page')
-          window.history.pushState(null,null,location)
+          loadPage(location)
         })
 
         $('body').on('click', '.xbutton', function () {
