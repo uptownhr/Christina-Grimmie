@@ -60,7 +60,7 @@ html(lang='en')
     script(async='', src='//platform.twitter.com/widgets.js', charset='utf-8')
     script(src='http://static.jsbin.com/js/embed.min.js?3.34.0')
     script.
-      (function () {
+      $( document ).ready(function() {
         var vid = document.getElementById("music");
         vid.volume = .3;
         vid.play()
@@ -71,34 +71,30 @@ html(lang='en')
           $('main').load(location + ' .page')
           window.history.pushState(null,null,location)
         })
-	
-      })();
 
-      $( document ).ready(function() {
-        $('.icon').on('click', function (){
-          var videoURL = $(this).attr('title');
-          $('.video-frame').attr('src', videoURL)
-          $('.xinvisible').show();
-          event.preventDefault();
-        })
-
-        //close button activate home page
-        $('.xbutton').on('click', function (){
+        $('body').on('click', '.xbutton', function () {
           $('.xinvisible').hide();
           $('.video-frame').attr('src', '')
         })
 
-        $('.trigger-hidden').on('click', function (){
-          var site = $(this).attr('title');
+        //close button activate for timeline page
+        $('body').on('click', '.xbutton2', function () {
+          $('.xinvisible-timeline').hide();
+          $('.websiteRip').attr('src', '')
+        })
+
+        $('body').on('click', '.trigger-hidden', function () {
+          var site = $(this).attr('href');
           $('.websiteRip').attr('src', site)
           $('.xinvisible-timeline').show();
           event.preventDefault();
         })
-
-        //close button activate for timeline page
-        $('.xbutton2').on('click', function (){
-          $('.xinvisible-timeline').hide();
-          $('.websiteRip').attr('src', '')
+        $('body').on('click', '.icon', function (event) {
+          var videoURL = $(this).attr('href');
+          console.log(videoURL)
+          $('.video-frame').attr('src', videoURL)
+          $('.xinvisible').show();
+          event.preventDefault();
         })
       })
     script.
