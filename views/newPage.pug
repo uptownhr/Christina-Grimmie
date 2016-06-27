@@ -7,7 +7,12 @@ block content
       section#slider.clear
         .grid-container
           .xrow
-            img.col-10(src='../site/img/animeImage.gif', alt='')
+            img.col-10.slideShow(src='../site/img/animeImage.gif', alt='')
+            img.col-10.slideShow(src='../site/img/background1.jpg', alt='')
+            img.col-10.slideShow(src='../site/img/background2.jpg', alt='')
+            img.col-10.slideShow(src='../site/img/background3.jpg', alt='')
+            img.col-10.slideShow(src='../site/img/background4.jpg', alt='')
+            img.col-10.slideShow(src='../site/img/background5.jpg', alt='')
 
       // main content
       #intro
@@ -36,7 +41,7 @@ block content
       #homepage.last.clear
         .grid-container
           .xrow
-            .col-3-3
+            .col-3
               section.x1st
                 h2.title From The Author
                 article
@@ -53,7 +58,7 @@ block content
                   | songwriter,
                   | daughter,
                   | life
-            .col-2-5
+            .col-3
               section.x2nd
                 h2.title Quick Links
                 nav#lastNav
@@ -68,7 +73,7 @@ block content
                       a(href='https://www.instagram.com/TheRealGrimmie/') Grimmie's Instagram
                     li.last
                       a(href='https://www.gofundme.com/christinagrimmie') Grimmie's gofundme
-            .col-4-5
+            .col-4
               section.lastbox.x3rd
                 h2.title About The Site
                 img.imgl(src='../site/img/logo-black.png', width='65px', height='auto', alt='')
@@ -86,3 +91,20 @@ block content
       p.fl_right
         | Template by
         a(href='http://www.os-templates.com/', title='Free Website Templates') OS Templates
+  script.
+    var slideIndex = 0;
+    carousel();
+
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("slideShow");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > x.length) {
+        slideIndex = 1
+      }
+      x[slideIndex - 1].style.display = "block";
+      setTimeout(carousel, 2500); // Change image every 2.5 seconds
+    }
