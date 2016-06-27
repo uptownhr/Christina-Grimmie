@@ -657,13 +657,14 @@ body {
 
 
 nav {
-  float: right;
+  float: left;
   margin-right: 50px;
   margin-top: 20px;
+  width: 100%;
 }
 
 nav a {
-  padding: 16px;
+  padding: 0px;
   -moz-transition: all .2s ease-in-out;
   -o-transition: all .2s ease-in-out;
   -webkit-transition: all .2s ease-in-out;
@@ -724,7 +725,7 @@ div.wrapper{display:block; width:100%; margin:0; padding:0; text-align:left;}
 
 /*----------------------------------------------Generalise-------------------------------------*/
 
-#header, #container, #footer{display:block; width:960px; margin:0 auto;}
+#header, #container, #footer{display:block; width:100%; margin:0 auto;}
 
 nav ul{margin:0; padding:0; padding-start: 0px; list-style:none;}
 
@@ -757,7 +758,7 @@ input, textarea, select{font-size:12px; font-family:Georgia,"Times New Roman",Ti
 
 #header{padding:20px 0;}
 
-#header #hgroup{float:left; margin:0 0 20px 0;}
+#header #hgroup{float:left; margin:0 0 20px 20px;}
 #header #hgroup h1, #header #hgroup h2{font-weight:normal; font-style:normal; text-transform:none;}
 #header #hgroup h1{font-size:36px;}
 #header #hgroup h2{font-size:13px;}
@@ -781,20 +782,19 @@ input, textarea, select{font-size:12px; font-family:Georgia,"Times New Roman",Ti
 #container .more{text-align:right;}
 
 /* ------Slider-----*/
-
-#container #slider{width:100%;}
-#container #slider figure{}
-#container #slider figure img{float:right; width:630px; height:300px;}
-#container #slider figure figcaption{display:block; float:left; width:320px; height:300px; padding:20px; overflow:hidden; color:#989898; background-color:#464646; line-height:1.6em;}
+#container #slider{width:100%; border-bottom-color: rbg(214,214,214); border-bottom-style: solid; border-bottom-width: 1px; padding-bottom: 30px;}
+#container #slider .row { }
+#container #slider figure{ diplay: flex; align-items: center;}
+#container #slider figure figcaption{border-radius: 10px; display:block; float:left; padding:10px; width: 100%; height: 100%; overflow:hidden; color:#989898; background-color:#464646; line-height:1.6em;}
 #container #slider figure figcaption a{color:#FF9900; background-color:#464646;}
 #container #slider figure h2{font-size:42px; font-weight:normal; font-style:italic; text-transform:none;}
 #container #slider figure footer{}
 
 /* ------Main Content-----*/
 
-#container #intro{width:100%; margin-bottom:60px; padding-bottom:20px; border-bottom:1px solid #D6D6D6;}
+#container #intro{width:100%; margin-bottom:10px; padding-bottom:0px; border-bottom:1px solid #D6D6D6;}
 #container #intro section{width:100%;}
-#container #intro section article{}
+#container #intro section article{ padding-left: 25px; padding-right: 25px;}
 #container #intro section article h2{margin-bottom:15px;}
 #container #intro section article p{}
 #container #intro section article figure ul{display:block; width:100%; margin:0; padding:0; list-style:none;}
@@ -816,7 +816,7 @@ input, textarea, select{font-size:12px; font-family:Georgia,"Times New Roman",Ti
 
 /* ------Quick Links-----*/
 
-#container #homepage section nav li{margin:0 0 8px 0; padding:0 0 5px 0; border-bottom:1px solid #D6D6D6;}
+#container #homepage section nav li{margin:0 0 8px 0; padding:0 0 5px 0; border-bottom:0px solid #D6D6D6;}
 #container #homepage section nav li.last{margin:0;}
 /* #container #homepage section nav a{padding:0 0 0 10px; background:url("../images/arrow.gif") left center no-repeat;} */
 
@@ -827,12 +827,12 @@ input, textarea, select{font-size:12px; font-family:Georgia,"Times New Roman",Ti
 
 .xinvisible {
   display: none;
-  top: 30%;
-  left: 35%;
+  top: 20%;
+  left: 25%;
   position: fixed;
   z-index: 10;
-  height: 330px;
-  width: 580px;
+  height: auto;
+  width: 50%;
 }
 
 .xinvisible button {
@@ -847,8 +847,8 @@ input, textarea, select{font-size:12px; font-family:Georgia,"Times New Roman",Ti
 .xinvisible .xmen {
   margin: 0 auto;
   margin-top: 6px;
-  width: 560px;
-  height: 315px;
+  width: 100%;
+  height: auto;
 }
 .xinvisible-timeline {
   display: none;
@@ -856,8 +856,8 @@ input, textarea, select{font-size:12px; font-family:Georgia,"Times New Roman",Ti
   left: 30%;
   position: fixed;
   z-index: 10;
-  height: 720px;
-  width: 570px;
+  height: 700px;
+  width: 50%;
 }
 .xinvisible-timeline .xbutton2 {
   z-index: 15;
@@ -871,7 +871,7 @@ input, textarea, select{font-size:12px; font-family:Georgia,"Times New Roman",Ti
 .xinvisible-timeline .xmen {
   margin: 0 auto;
   margin-top: 6px;
-  width: 560px;
+  width: 100%;
   height: 700px;
 }
 .xinvisible-timeline iframe {
@@ -899,3 +899,19 @@ input, textarea, select{font-size:12px; font-family:Georgia,"Times New Roman",Ti
   float: left;
 }
 
+.x1st {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.x2nd {
+  margin-left: 5px;
+}
+
+.x3rd {
+  margin-right: 10px;
+}
+
+.heading2 {
+  color: white;
+}

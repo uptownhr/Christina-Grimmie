@@ -5,81 +5,84 @@ block content
     #container.clear
       // Slider
       section#slider.clear
-        figure
-          img(src='../site/img/animeImage.gif', alt='')
-          figcaption
-            h2 A Loss That Will Be Remembered
-            p
-              | Christina Victoria Grimmie was an extremely talented American singer and songwriter whose bright future was cut short by a deranged, mentally sick, pathetic, 27 year old man.  She was taken from the world, much too soon.  She will be missed dearly.
-            a.trigger-hidden(href='https://en.wikipedia.org/wiki/Death_of_Christina_Grimmie') Read More »
+        .grid-container
+          .xrow
+            img.col-10(src='../site/img/animeImage.gif', alt='')
 
       // main content
       #intro
         section.clear
-          // article 1
-          article.two_quarter
-            h2 Celebrating the Life of Christia Grimmie
-            p This page was created to honor and celebrate the life of Christia Grimmie as well as keep a record of her dedication and commitment to her art, to her fans, and for all who loved her and wishes more than anything to have prevented the tragic end that came to be.
-          // article 2
-          article.two_quarter.lastbox
-            figure
-              ul.clear
-                li
-                  a.icon(title='voice' href='https://www.youtube.com/embed/bRGOAeC_Vhg')
-                    img(src='../site/img/icon1.jpg', width='130', height='130', alt='')
-                li
-                  a.icon(title='solo' href='https://www.youtube.com/embed/QfifaWeiem4')
-                    img(src='../site/img/icon2.png', width='130', height='130', alt='')
-                li.last
-                  a.icon(title='tribute' href='https://www.youtube.com/embed/3290550YVog')
-                    img(src='../site/img/icon3.jpg', width='130', height='130', alt='')
+          .grid-container
+            .xrow
+              .col-4
+                article
+                  h2 Celebrating the Life of Christia Grimmie
+                  p This page was created to honor and celebrate the life of Christia Grimmie as well as keep a record of her dedication and commitment to her art, to her fans, and for all who loved her and wishes more than anything to have prevented the tragic end that came to be.
+                // article 2
+              .col-6
+                article.lastbox
+                  figure
+                    ul.clear
+                      li
+                        a.icon(title='voice' href='https://www.youtube.com/embed/bRGOAeC_Vhg')
+                          img(src='../site/img/icon1.jpg', width='130', height='130', alt='')
+                      li
+                        a.icon(title='solo' href='https://www.youtube.com/embed/QfifaWeiem4')
+                          img(src='../site/img/icon2.png', width='130', height='130', alt='')
+                      li.last
+                        a.icon(title='tribute' href='https://www.youtube.com/embed/3290550YVog')
+                          img(src='../site/img/icon3.jpg', width='130', height='130', alt='')
 
       #homepage.last.clear
-        section.one_quarter
-          h2.title From The Author
-          article
-            header
-            p June 23 2016
-            p
-            | Filled with so much sadness,
-            | this is just one person's attempt
-            | to understand and accept
-            | the tragic loss
-            | of this great
-            | artist,
-            | singer,
-            | songwriter,
-            | daughter,
-            | life
-
-        section.one_quarter
-          h2.title Quick Links
-          nav#lastNav
-            ul
-              li
-                a(href='https://www.youtube.com/channel/UCUudDyi0JiVmSxarvU98YYQ') Grimmie's YouTube Page
-              li
-                a(href='https://www.facebook.com/christinagrimmie') Grimmie's Facebook
-              li
-                a(href='https://twitter.com/TheRealGrimmie') Grimmie's Twiiter
-              li
-                a(href='https://www.instagram.com/TheRealGrimmie/') Grimmie's Instagram
-              li.last
-                a(href='https://www.gofundme.com/christinagrimmie') Grimmie's gofundme
-        section.two_quarter.lastbox
-          h2.title About The Site
-          img.imgl(src='../site/img/logo-black.png', width='65px', height='auto', alt='')
-          p
-            | Word cannot express the sorrow felt by the those who loved Christina Grimmie.  When the world takes someone that is so dear to us, it is hard but to feel angry, frustrated, and confused as to why the things happened as they did.  Christina Grimmie was very special.  She was not some other vapid, sell out, who hungered for fame and fortune.  It could be said that money was not even a motive for her.  She simply wanted to share her music and her talents with the world.  Christina Grimmie was/is worth knowing about and we at Penguin felt she should not be forgotten.  This site was created to give tribute to her dedication and commitment to her fans over the years and to celebrate her life and remember her for her contribution to the world of music.
-          footer.more
-            a(href='/contactUS') Contact Us »
-      // / content body
-  // Footer
+        .grid-container
+          .xrow
+            .col-3-3
+              section.x1st
+                h2.title From The Author
+                article
+                  header
+                  p June 23 2016
+                  p
+                  | Filled with so much sadness,
+                  | this is just one person's attempt
+                  | to understand and accept
+                  | the tragic loss
+                  | of this great
+                  | artist,
+                  | singer,
+                  | songwriter,
+                  | daughter,
+                  | life
+            .col-3-3
+              section.x2nd
+                h2.title Quick Links
+                nav#lastNav
+                  ul
+                    li
+                      a(href='https://www.youtube.com/channel/UCUudDyi0JiVmSxarvU98YYQ') Grimmie's YouTube
+                    li
+                      a(href='https://www.facebook.com/christinagrimmie') Grimmie's Facebook
+                    li
+                      a(href='https://twitter.com/TheRealGrimmie') Grimmie's Twiiter
+                    li
+                      a(href='https://www.instagram.com/TheRealGrimmie/') Grimmie's Instagram
+                    li.last
+                      a(href='https://www.gofundme.com/christinagrimmie') Grimmie's gofundme
+            .col-3-3
+              section.lastbox.x3rd
+                h2.title About The Site
+                img.imgl(src='../site/img/logo-black.png', width='65px', height='auto', alt='')
+                p
+                  | Word cannot express the sorrow felt by the those who loved Christina Grimmie.  When the world takes someone that is so dear to us, it is hard but to feel angry, frustrated, and confused as to why the things happened as they did.  Christina Grimmie was very special.  She was not some other vapid, sell out, who hungered for fame and fortune.  It could be said that money was not even a motive for her.  She simply wanted to share her music and her talents with the world.  Christina Grimmie was/is worth knowing about and we at Penguin felt she should not be forgotten.  This site was created to give tribute to her dedication and commitment to her fans over the years and to celebrate her life and remember her for her contribution to the world of music.
+                footer.more
+                  a(href='/contactUS') Contact Us »
+            // / content body
+        // Footer
   .wrapper.row3
     footer#footer.clear
       p.fl_left
         | Copyright © 2016 - All Rights Reserved -
-        a(href='/') ChristinaGrimmieForever.com
+        a(href='/') Christina-Grimmie
       p.fl_right
         | Template by
         a(href='http://www.os-templates.com/', title='Free Website Templates') OS Templates

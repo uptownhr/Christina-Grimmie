@@ -12,36 +12,41 @@ html(lang='en')
     link(href='/admin/assets/css/application.css', rel='stylesheet')
     link(rel='stylesheet', href='/css/timeline.css')
     link(rel='stylesheet', href='/site/css/style.css')
+    link(rel='stylesheet', href='/site/css/grid.css')
   body
-    .xinvisible
-      button.xbutton X
-      .xmen
-        .video-container
-          iframe.video-frame(src="" frameborder="0" allowfullscreen)
-    .xinvisible-timeline
-      button.xbutton2 X
-      .xmen
-        iframe.websiteRip(src="")
+    .grid-container
+      .xinvisible
+        button.xbutton X
+        .xmen
+          .video-container
+            iframe.video-frame(src="" frameborder="0" allowfullscreen)
+      .xinvisible-timeline
+        button.xbutton2 X
+        .xmen
+          iframe.websiteRip(src="")
     .container.content
       .wrapper.row1
         header#header.clear(style="position:relative")
           #hgroup
             h1
               a(href='/christina-grimmie') Christina Grimmie
-            h2 Remembering the Life and Accomplishments of Christina Grimmie
-          nav
-            ul
-              audio#music(controls).pull-right
-                source(src="/holdon.mp3" type="audio/mpeg")
-              li
-                a(href='/christina-grimmie') Home
-              li.last
-                a(href='/christina-grimmie/timeline') Timeline
-              .share(style="position: absolute; top:25px; right: 0")
-                span.pull-right.st_sharethis_large(displayText='ShareThis')
-                span.pull-right.st_facebook_large(displayText='Facebook')
-                span.pull-right.st_twitter_large(displayText='Twitter')
-                span.pull-right.email_large(displayText='Email')    
+            h2.heading2 Remembering the Life and Accomplishments of Christina Grimmie
+            .share(style="position: absolute; top:25px; right: 0")
+              span.pull-right.st_sharethis_large(displayText='ShareThis')
+              span.pull-right.st_facebook_large(displayText='Facebook')
+              span.pull-right.st_twitter_large(displayText='Twitter')
+              span.pull-right.email_large(displayText='Email')
+        .grid-container.navSize
+          .xrow
+            nav#navSize
+              ul.col-10
+                li.col-1-5(style="text-align: center")
+                  a(href='/christina-grimmie') Home
+                li.col-1-5(style="text-align: center")
+                  a(href='/christina-grimmie/timeline') Timeline
+                audio#music(controls).pull-right.col-4
+                  source(src="/holdon.mp3" type="audio/mpeg")
+
       main
         block content
       footer.footer(style='clear: both;')
