@@ -859,6 +859,7 @@ input, textarea, select{font-size:12px; font-family:Georgia,"Times New Roman",Ti
   z-index: 10;
   height: 700px;
   width: 50%;
+  padding-right: 8px;
 }
 .xinvisible-timeline .xbutton2 {
   z-index: 15;
