@@ -798,14 +798,14 @@ input, textarea, select{font-size:12px; font-family:Georgia,"Times New Roman",Ti
 #container #intro section article h2{margin-bottom:15px;}
 #container #intro section article p{}
 #container #intro section article figure ul{display:block; width:100%; margin:0; padding:0; list-style:none;}
-#container #intro section article figure ul li{display:inline-block; float:left; margin:0 25px 0 0;}
+#container #intro section article figure ul li{display:inline-block; float:left; margin:0 0px 0 30px;}
 #container #intro section article figure ul li.last{margin:0;}
 #container #intro section article figure ul li img{width:130px; height:130px; margin:0; padding:4px; border:1px solid #D6D6D6;}
 #container #intro section article figure figcaption{display:block; width:100%; margin-top:20px; clear:both; text-align:center; text-transform:uppercase; font-weight:bold;}
 
 #container #homepage{display:block; width:100%; line-height:1.6em;}
 #container #homepage section{margin-bottom:0;}
-#container #homepage section h2.title{margin:0 0 25px 0; padding:0 0 8px 0; font-size:16px; font-weight:bold; text-transform:uppercase;}
+#container #homepage section h2.title{margin:20px 0 25px 0; padding:0 0 8px 0; font-size:16px; font-weight:bold; text-transform:uppercase;}
 #container #homepage section footer{clear:both;}
 
 /* ------Blogposts-----*/
