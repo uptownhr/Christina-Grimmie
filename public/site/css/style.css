@@ -917,3 +917,20 @@ input, textarea, select{font-size:12px; font-family:Georgia,"Times New Roman",Ti
 .heading2 {
   color: white;
 }
+
+@keyframes fading{
+  0%{
+    opacity:0
+  }
+  50%{
+    opacity:1
+  }
+  100%{
+    opacity:0
+  }
+}
+
+.slideShow {
+  animation-name: fading;
+  animation-duration: 2.5s;
+}
