@@ -15,4 +15,8 @@ router.get('/christina-grimmie/timeline', async ctx => {
   ctx.render('timeline')
 })
 
+router.get('/christina-grimmie/community', async ctx => {
+  ctx.render('community')
+})
+
 module.exports = router
